@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Daniel Oltmanns</title>
+    <description>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</description>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
+    <pubDate>Wed, 28 Jun 2017 12:32:26 -0700</pubDate>
+    <lastBuildDate>Wed, 28 Jun 2017 12:32:26 -0700</lastBuildDate>
+    <generator>Jekyll v3.4.2</generator>
+    
+      <item>
+        <title>Referral Maker CRM</title>
+        <description>
+</description>
+        <pubDate>Fri, 17 Mar 2017 00:00:00 -0700</pubDate>
+        <link>http://localhost:4000/2017/03/17/project-1/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/03/17/project-1/</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Referal Maker CRM</title>
+        <description>
+</description>
+        <pubDate>Mon, 13 Mar 2017 00:00:00 -0700</pubDate>
+        <link>http://localhost:4000/2017/03/13/project-9/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/03/13/project-9/</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Referal Maker CRM</title>
+        <description>
+</description>
+        <pubDate>Mon, 13 Mar 2017 00:00:00 -0700</pubDate>
+        <link>http://localhost:4000/2017/03/13/project-8/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/03/13/project-8/</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Referal Maker CRM</title>
+        <description>
+</description>
+        <pubDate>Mon, 13 Mar 2017 00:00:00 -0700</pubDate>
+        <link>http://localhost:4000/2017/03/13/project-7/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/03/13/project-7/</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Brian Buffini</title>
+        <description>
+</description>
+        <pubDate>Wed, 01 Mar 2017 00:00:00 -0800</pubDate>
+        <link>http://localhost:4000/2017/03/01/project-2/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/03/01/project-2/</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Golden</title>
+        <description>
+</description>
+        <pubDate>Wed, 16 Jul 2014 00:00:00 -0700</pubDate>
+        <link>http://localhost:4000/2014/07/16/project-3/</link>
+        <guid isPermaLink="true">http://localhost:4000/2014/07/16/project-3/</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Treehouse</title>
+        <description>
+</description>
+        <pubDate>Tue, 15 Jul 2014 00:00:00 -0700</pubDate>
+        <link>http://localhost:4000/2014/07/15/project-4/</link>
+        <guid isPermaLink="true">http://localhost:4000/2014/07/15/project-4/</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>The Blitz</title>
+        <description>
+</description>
+        <pubDate>Tue, 15 Jul 2014 00:00:00 -0700</pubDate>
+        <link>http://localhost:4000/2014/07/15/project-6/</link>
+        <guid isPermaLink="true">http://localhost:4000/2014/07/15/project-6/</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Startup Framework</title>
+        <description>
+</description>
+        <pubDate>Mon, 14 Jul 2014 00:00:00 -0700</pubDate>
+        <link>http://localhost:4000/2014/07/14/project-5/</link>
+        <guid isPermaLink="true">http://localhost:4000/2014/07/14/project-5/</guid>
+        
+        
+      </item>
+    
+  </channel>
+</rss>
