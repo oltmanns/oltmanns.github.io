@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="robots" content="noindex,nofollow" />	
+	<link href="assets/styles/global.min.css" rel="stylesheet" media="all">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+
+<body>
+
+<div id="secondary-content">
+
+  <!-- Top Bar -->
+  <div class="nav-bar contain-to-grid fixed">
+    <nav class="top-bar" data-topbar role="navigation">
+	    <ul class="title-area">
+        <li class="name">
+          <h1><a href="index.html#about">Brian Buffini</a></h1>
+        </li>
+      </ul>
+      <ul class="back">
+        <li><a href="index.html#about">&#215;</a></li>
+			</ul>
+    </nav>
+  </div>
+
+  <!-- Intro Video --> 
+  <section id="intro">			
+    <div class="row x-center-y-center">
+		  <div class="medium-8 small-centered large-centered columns">
+			  <div class="flex-video widescreen">
+				  <iframe width="560" height="315" src="https://www.youtube.com/embed/c-RysSuQO4o?rel=0&t=1s&autoplay=1" frameborder="0" allowfullscreen></iframe>
+			  </div>
+		  </div>
+	  </div>
+  </section>
+
+  <!-- Documentary --> 
+  <section id="documentary">
+    <div class="row x-center-y-center">
+		  <div class="medium-8 small-centered large-centered columns">
+			  <div class="flex-video widescreen">
+				  <iframe width="560" height="315" src="https://www.youtube.com/embed/JhdT5s9jGBA?start=27&autoplay=1" frameborder="0" allowfullscreen></iframe>
+			  </div>
+		  </div>
+	  </div>
+  </section>
+
+  <!-- Motivational Video --> 
+  <section id="motivation">
+    <div class="row x-center-y-center">
+		  <div class="medium-8 small-centered large-centered columns">
+			  <div class="flex-video widescreen">
+				  <iframe width="560" height="315" src="https://www.youtube.com/embed/2euQr8N6elY?list=PLkXs4sHmjm5gfsTaMHcxTDFpxNc-0u60U?rel=0&t=1s&autoplay=1" frameborder="0" allowfullscreen></iframe>
+			  </div>
+		  </div>
+	  </div>
+  </section>
+
+</div><!-- End Secondary Content -->
+
+
+<script src="assets/scripts/modernizr.js"></script>
+<script src="assets/scripts/foundation.min.js"></script>
+<script src="https://use.typekit.net/vin1ioq.js"></script>
+<script>try { Typekit.load({ async: true }); } catch (e) { }</script>	
+
+<script type="text/javascript">
+
+  $(document).ready(function () {
+
+    //Get URL Parameters
+    function getQueryVariable(variable) {
+      var query = window.location.search.substring(1);
+      var vars = query.split("&");
+      for (var i = 0; i < vars.length; i++) {
+        var pair = vars[i].split("=");
+        if (pair[0] == variable) { return pair[1]; }
+      }
+      return (false);
+    }
+    var id = getQueryVariable('id'); // Get URL Query Variable
+    $('#' + id).show(); // Show DIV with Matching ID   
+    $('section').not('#' + id).remove(); //Remove all videos except for the one called by URL parameter
+    
+
+    if (window.location.href.indexOf("intro") > -1) {
+      $('nav a').attr("href", "index.html#about");
+    } else if (window.location.href.indexOf("bbc-documentary") > -1) {
+      $('nav a').attr("href", "index.html#entrepreneur");
+    } else if (window.location.href.indexOf("motivation") > -1) {
+      $('nav a').attr("href", "index.html#master-motivator");
+    }
+
+  });
+
+</script>
+
+
+</body>
+</html>

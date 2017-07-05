@@ -1,0 +1,105 @@
+<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="global.master.vb" Inherits="ProvidenceSystems.global1" %>
+
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head id="Head1" runat="server">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="stylesheet" href="<%=Page.ResolveUrl("~/members-area/assets/styles/css/global.min.css?v=1.3")%>" type="text/css">
+  <asp:ContentPlaceHolder id="head" runat="server"></asp:ContentPlaceHolder>
+</head>
+
+<body>
+
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-WMSKGL"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>  (function(w, d, s, l, i) {
+    w[l] = w[l] || []; w[l].push({ 'gtm.start':
+new Date().getTime(), event: 'gtm.js'
+    }); var f = d.getElementsByTagName(s)[0],
+j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+'//www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+  })(window, document, 'script', 'dataLayer', 'GTM-WMSKGL');</script>
+  
+<form id="form1" runat="server">
+
+<!-- off-canvas wrappers -->
+<div class="off-canvas-wrapper">
+  <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
+    
+    <!-- off-canvas title bar for smaller screens -->
+    <div class="title-bar hide-for-large" data-hide-for="large">
+			<div class="title-bar-left">
+				<span class="title-bar-title">
+					<a href="<%=ResolveUrl("~/members-area/default.aspx")%>"><img src="<%=Page.ResolveUrl("~/members-area/assets/images/logos/buffini-and-company.jpg")%>" width="110"></a>
+				</span>
+			</div>
+			<div class="title-bar-right">
+				<button class="menu-icon" type="button" data-open="offCanvasLeft"></button>
+			</div>
+    </div>
+
+    <!-- off-canvas left menu -->
+    <div class="off-canvas position-left reveal-for-large" id="offCanvasLeft" data-off-canvas>
+			
+      <!-- Logo / Tagline -->
+		  <a href="default.aspx">
+		    <img src="assets/images/logos/buffini-and-company.jpg" width="160" class="pt40 pb40 float-center show-for-large">
+      </a>
+  						
+      <!-- Menu -->
+      <asp:Literal ID="litNav" runat="server"></asp:Literal>
+
+      <div class="account">
+		    <a href="http://www.buffiniandcompany.com/Store/SignOut.aspx?redirecturl=/default.aspx">Log Out</a>
+			  <a href="http://www.buffiniandcompany.com/store/account.aspx">Settings</a>
+		  </div>
+  		
+    </div>
+    
+    <!-- page content -->
+    <div class="off-canvas-content" data-off-canvas-content>
+      <asp:ContentPlaceHolder id="content" runat="server"></asp:ContentPlaceHolder>
+    </div>
+    
+    <!-- end off-canvas wrappers -->
+  </div>
+</div>
+
+
+<!-- footer -->
+<footer>
+  <div class="row footer-section pt40 pb40">
+    <div class="footer-copyright">
+	    <span>&copy; <script>document.write((new Date()).getFullYear())</script> Buffini &amp; Company</span>
+    </div>
+    <ul class="inline-list footer-links">
+	    <li><a href="http://www.buffiniandcompany.com/conditions-of-use.aspx">Terms of Use</a></li>
+	    <li><a href="http://www.buffiniandcompany.com/privacy-policy.aspx">Privacy</a></li>
+	    <li><a href="http://www.buffiniandcompany.com/company-policies.aspx">Policies</a></li>
+    </ul>
+  </div>
+</footer>
+
+
+<%--global scripts--%>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="<%=Page.ResolveUrl("~/members-area/assets/scripts/global/libraries/foundation.min.js?v=1.3")%>"></script>	
+<script src="<%=Page.ResolveUrl("~/members-area/assets/scripts/global/global.js?v=1.2")%>"></script>
+<script src="<%=Page.ResolveUrl("~/members-area/assets/scripts/global/libraries/list.min.js?v=1.1")%>"></script>
+<script src="<%=Page.ResolveUrl("~/members-area/assets/scripts/global/libraries/list.fuzzysearch.min.js?v=1.1")%>"></script>
+<script src="<%=Page.ResolveUrl("~/members-area/assets/scripts/global/libraries/list.pagination.min.js?v=1.1")%>"></script>	
+<script src="//use.typekit.net/vin1ioq.js"></script>
+<script>  try { Typekit.load(); } catch (e) { }</script>
+
+<%--page-specific-scripts--%>
+<asp:ContentPlaceHolder id="scripts" runat="server">
+</asp:ContentPlaceHolder>
+
+</form>
+</body>
+</html>
