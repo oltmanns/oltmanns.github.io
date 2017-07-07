@@ -1,52 +1,146 @@
-﻿<%@ Page Title="" Language="VB" MasterPageFile="~/_global2.master" AutoEventWireup="false" CodeFile="default2.aspx.vb" Inherits="default2" %>
+<!DOCTYPE html>
+<html class="no-js" lang="en">
 
-<asp:Content ID="Content1" ContentPlaceHolderID="headStyles" Runat="Server">
-  <link href="<%= Page.ResolveUrl("~/assets/styles/css/global.min.css") %>" rel="stylesheet" />
-  <link href="<%= Page.ResolveUrl("~/assets/styles/css/home.min.css") %>" rel="stylesheet" />
-</asp:Content>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="assets/styles/global.min.css" rel="stylesheet" />
+  <link href="assets/styles/home.min.css" rel="stylesheet" />
+</head>
 
-<asp:Content ID="Content2" ContentPlaceHolderID="headOther" Runat="Server">
-  <meta name="robots" content="noindex, nofollow">
-</asp:Content>
 
-<asp:Content ID="Content3" ContentPlaceHolderID="globalContent" Runat="Server">
+<!-- Nav -->
+<div id="navContainer" class="nav-container">
+  <!-- Logo -->
+  <a id="globalLogo" class="global-logo" href="https://www.buffiniandcompany.com">
+    <img src="assets/images/global/logo.jpg" width="130">
+  </a>
+  <!-- Member Nav -->
+  <nav class="nav-member-large-screen">
+    <ul class="menu">
+      <li><a href="#" class="button hollow white">Member Login</a></li>
+    </ul>
+  </nav>
+  <!-- Toggle Nav (for small screens) -->
+  <a id="navTogglePrimary" class="nav-toggle nav-toggle-primary"><span></span></a>
+  <a id="navToggleSecondary" class="nav-toggle nav-toggle-secondary"><span></span></a>
+  <!-- Primary Nav -->
+  <nav id="navPrimary" class="nav-primary">
+    <ul class="menu vertical">
+      <li class="nav-primary-item nav-member-small-screen">
+        <a class="nav-primary-open" href="#">Member Login</a>
+      </li>
+      <li class="nav-primary-item" data-nav-primary-item>
+        <a data-open-nav="coaching" class="nav-primary-open nav-primary-coaching">Coaching</a>
+        <a data-close-nav class="nav-primary-close">&times;</a>
+      </li>
+      <li class="nav-primary-item" data-nav-primary-item>
+        <a data-open-nav="training" class="nav-primary-open nav-primary-training">Training</a>
+        <a data-close-nav class="nav-primary-close">&times;</a>
+      </li>
+      <li class="nav-primary-item" data-nav-primary-item>
+        <a data-open-nav="products" class="nav-primary-open nav-primary-products">Products</a>
+        <a data-close-nav class="nav-primary-close">&times;</a>
+      </li>
+      <li class="nav-primary-item" data-nav-primary-item>
+        <a data-open-nav="events" class="nav-primary-open nav-primary-events">Events</a>
+        <a data-close-nav class="nav-primary-close">&times;</a>
+      </li>
+      <li class="nav-primary-item" data-nav-primary-item>
+        <a data-open-nav="resources" class="nav-primary-open nav-primary-resources">Resources</a>
+        <a data-close-nav class="nav-primary-close">&times;</a>
+      </li>
+      <li class="nav-primary-item" data-nav-primary-item>
+        <a data-open-nav="company" class="nav-primary-open nav-primary-company">Company</a>
+        <a data-close-nav class="nav-primary-close">&times;</a>
+      </li>
+    </ul>
+  </nav> 
+  <!-- Secondary Nav -->
+  <nav id="navSecondary" class="nav-secondary">
+    <ul data-menu-secondary="coaching" class="menu vertical hide">
+      <li class="nav-secondary-title">Coaching</li>
+      <li><a href="https://www.buffiniandcompany.com/coaching/one2one-coaching.aspx">One2One Coaching&trade;</a></li>
+      <li><a href="https://www.buffiniandcompany.com/coaching/group-coaching.aspx">Group Coaching</a></li>
+      <li><a href="https://www.buffiniandcompany.com/stories">Success Stories</a></li> 
+      <li><a href="https://www.buffiniandcompany.com/membership/business-consultation.aspx">Free Business Consultation</a></li> 
+    </ul>
+    <ul data-menu-secondary="training" class="menu vertical hide">
+      <li class="nav-secondary-title">Training</li>
+      <li><a href="https://www.buffiniandcompany.com/peak-producers.aspx">Peak Producers&reg;</a></li>
+      <li><a href="https://www.buffiniandcompany.com/mentor-certification.aspx">Mentor Certification</a></li>
+      <li><a href="https://www.buffiniandcompany.com/recruit/">Ultimate Recruiting Solution</a></li>
+      <li><a href="https://www.buffiniandcompany.com/training/buffini-tv/default.aspx">Buffini TV</a></li>
+    </ul>
+    <ul data-menu-secondary="products" class="menu vertical hide">
+      <li class="nav-secondary-title">Products</li>
+      <li><a href="https://www.buffiniandcompany.com/blitz">Buffini &amp; Company's Blitz</a></li>
+      <li><a href="https://www.buffiniandcompany.com/coaching/referral-maker-pro.aspx">Referral Maker&reg; PRO</a></li>
+      <li><a href="https://www.referralmaker.com">Referral Maker&reg; CRM</a></li>
+      <li><a href="https://www.buffiniandcompany.com">Other Products</a></li>
+    </ul>
+    <ul data-menu-secondary="events" class="menu vertical hide">
+      <li class="nav-secondary-title">Events</li>
+      <li><a href="https://www.buffiniandcompany.com/successtour">Buffini's Success Tour&trade;</a></li>
+      <li><a href="https://www.buffiniandcompany.com/gamechangers">Buffini &amp; Company's GameChangers&trade;</a></li>
+      <li><a href="https://www.buffiniandcompany.com/mastermind">MasterMind Summit&reg;</a></li>
+      <li><a href="https://www.buffiniandcompany.com/tpe">The Peak Experience&reg;</a></li>
+    </ul>
+    <ul data-menu-secondary="resources" class="menu vertical hide">
+      <li class="nav-secondary-title">Resources</li>
+      <li><a href="https://www.brianbuffini.com/default.aspx#podcasts">The Brian Buffini Show Podcast</a></li>
+      <li><a href="http://blog.buffiniandcompany.com">Buffini &amp; Company Blogs</a></li>
+      <li><a href="http://resources.buffiniandcompany.com">Resource Hub</a></li>
+    </ul>
+    <ul data-menu-secondary="company" class="menu vertical hide">
+      <li class="nav-secondary-title">Company</li>
+      <li><a href="https://www.buffiniandcompany.com/about-buffini-and-company.aspx">About Us</a></li>
+      <li><a href="http://resources.buffiniandcompany.com/media">Media &amp; Awards</a></li>
+      <li><a href="https://press.buffiniandcompany.com">Press Releases</a></li>
+      <li><a href="https://www.buffiniandcompany.com/membership/submit-referral.aspx">Referrals</a></li>
+      <li><a href="https://www.buffiniandcompany.com/careers.aspx">Careers</a></li>
+      <li><a href="https://www.buffiniandcompany.com/contact-buffini-and-company.aspx">Contact Us</a></li>
+    </ul>
+  </nav>
+</div>
 
 
 <!-- Hero -->
-<div id="hero" class="home-header">        
+<div id="hero" class="home-header">     
   <div class="orbit" role="region" aria-label="Slide label" data-orbit data-options="animInFromLeft:fade-in; animInFromRight:fade-in; animOutToLeft:fade-out; animOutToRight:fade-out;">
     <ul class="orbit-container text-light-100">
       <button class="orbit-previous"><span class="show-for-sr">Previous Slide</span><svg width="15" height="30" viewBox="391 296 10 20"><path d="M391.4 306c0 0.2 0.1 0.4 0.2 0.6l7.5 9c0.3 0.4 0.9 0.4 1.2 0.1 0.4-0.3 0.4-0.9 0.1-1.2l-7-8.5 7-8.5c0.3-0.4 0.3-0.9-0.1-1.2 -0.4-0.3-1-0.3-1.2 0.1l-7.5 9C391.5 305.6 391.4 305.9 391.4 306z" fill="#FFF" /></svg></button>
       <button class="orbit-next"><span class="show-for-sr">Next Slide</span><svg width="15" height="30" viewBox="-161.7 223.9 25.4 54.1"><path d="M-136.9 249.4l-20.5-24.6c-0.8-1-2.4-1.2-3.4-0.3 -1 0.9-1.2 2.4-0.3 3.4l19.2 23.1 -19.2 23.1c-0.8 1-0.7 2.5 0.3 3.4s2.5 0.7 3.4-0.3l20.5-24.6c0.4-0.4 0.6-1 0.6-1.5S-136.5 249.8-136.9 249.4z" fill="#FFF" /></svg></button>
-      <li class="is-active orbit-slide" data-interchange="[assets/images/home/header/sophia-sanchez.jpg, small]" style="background-position:bottom left;">
+      <li class="is-active orbit-slide" data-interchange="[assets/images/header/sophia-sanchez.jpg, small]" style="background-position:bottom left;">
         <div class="row expanded home-header-content">
           <div class="columns large-8 large-offset-4">
             <h1 class="home-header-headline-large"><strong>1 in 8 Homes</strong> are sold by Buffini&nbsp;&amp;&nbsp;Company Trained&nbsp;Agents.</h1>
           </div>
         </div>
       </li>
-      <li class="orbit-slide" data-interchange="[assets/images/home/header/elizabeth-lucchesi.jpg, small]" style="background-position:bottom left;">
+      <li class="orbit-slide" data-interchange="[assets/images/header/elizabeth-lucchesi.jpg, small]" style="background-position:bottom left;">
         <div class="row expanded home-header-content">
           <div class="columns large-8 large-offset-4">
             <h1 class="home-header-headline-small">A unique and highly-effective <strong>lead generation system</strong>, comprehensive business coaching and training programs.</h1>
           </div>
         </div>
       </li>
-      <li class="orbit-slide" data-interchange="[assets/images/home/header/mike-strouff.jpg, small]" style="background-position:bottom right;">
+      <li class="orbit-slide" data-interchange="[assets/images/header/mike-strouff.jpg, small]" style="background-position:bottom right;">
         <div class="row expanded home-header-content">
           <div class="columns large-7">
             <h1 class="home-header-headline-large">20 Years, <strong>3 million people</strong> coached and trained in 37&nbsp;countries</h1>
           </div>
         </div>
       </li>
-      <li class="orbit-slide" data-interchange="[assets/images/home/header/tyler-potter.jpg, small]" style="background-position:bottom right;">
+      <li class="orbit-slide" data-interchange="[assets/images/header/tyler-potter.jpg, small]" style="background-position:bottom right;">
         <div class="row expanded home-header-content">
           <div class="columns large-7">
             <h1 class="home-header-headline-large">One2One Coaching members earn an average yearly <strong>salary of $358,486</strong></h1>
           </div>
         </div>
       </li>
-      <li class="orbit-slide" data-interchange="[assets/images/home/header/wells-fargo.jpg, small]" style="background-position:bottom right;">
+      <li class="orbit-slide" data-interchange="[assets/images/header/wells-fargo.jpg, small]" style="background-position:bottom right;">
         <div class="row expanded home-header-content">
           <div class="columns large-7">
             <h1 class="home-header-headline-large">Our members are individual agents to the <strong>largest mortgage company</strong> in the&nbsp;world</h1>
@@ -54,7 +148,7 @@
         </div>
       </li>
       <h5 class="orbit-caption text-center p40 show-for-large">Buffini &amp; Company is the largest real estate coaching and training company in North&nbsp;America.&nbsp;&nbsp;<a href="#stories" class="link-light">See&nbsp;how&nbsp;it&nbsp;can&nbsp;work&nbsp;for&nbsp;you!</a></h5> 
-  </div> 
+  </div>
 </div>
 
 
@@ -62,7 +156,7 @@
 <section id="stories" class="row expanded text-light-100 home-stories">
   <!-- Ben Andrews -->
   <a data-toggle="story-ben-andrews">
-    <div class="columns medium-12 large-4 home-story" data-interchange="[assets/images/home/stories/ben-andrews.jpg, small]">
+    <div class="columns medium-12 large-4 home-story" data-interchange="[assets/images/stories/ben-andrews.jpg, small]">
       <h2 class="home-story-headline">&quot;I went from $300 in the bank to $22.7 Million in Sales Volume!&quot;</h2>
       <img src="assets/images/global/icons/play-circled-light.png" width="40">
       <h5 class="p10 text-light-60">Watch Ben's story</h5>
@@ -70,7 +164,7 @@
   </a>
   <!-- Tim & Gina Johnson -->
   <a data-toggle="story-tim-gina-johnson">
-    <div class="columns medium-6 large-4 home-story" data-interchange="[assets/images/home/stories/tim-gina-johnson.jpg, small]">
+    <div class="columns medium-6 large-4 home-story" data-interchange="[assets/images/stories/tim-gina-johnson.jpg, small]">
       <h2 class="home-story-headline">&quot;We're taking an entire month off to go sailing!&quot;</h2>
       <img src="assets/images/global/icons/play-circled-light.png" width="40">
       <h5 class="p10 text-light-60">Watch Tim &amp; Gina's story</h5>
@@ -78,7 +172,7 @@
   </a>  
   <!-- Gloria Yu -->
   <a data-toggle="story-gloria-yu">
-    <div class="columns medium-6 large-4 home-story" data-interchange="[assets/images/home/stories/gloria-yu.jpg, small]">
+    <div class="columns medium-6 large-4 home-story" data-interchange="[assets/images/stories/gloria-yu.jpg, small]">
       <h2 class="home-story-headline">&quot;I now have a meaningful and fulfilled life that money cannot&nbsp;buy.&quot;</h2>
       <img src="assets/images/global/icons/play-circled-light.png" width="40">
       <h5 class="p10 text-light-60">Watch Gloria's story</h5>
@@ -122,7 +216,7 @@
     <!-- Carousel Item -->
     <div class="card home-latest-card" data-equalizer-watch>
      <a href="products/blitz/default.aspx">
-      <img src="assets/images/home/latest/blitz-launch.jpg">
+      <img src="assets/images/latest/blitz-launch.jpg">
       <div class="card-section">
         <h5 class="home-latest-card-headline">Buffini &amp; Company's Blitz</h5>
         <p>Join the largest coordinated, lead-generation program in the history of the real estate business!</p>
@@ -132,7 +226,7 @@
     <!-- Carousel Item -->
     <div class="card home-latest-card" data-equalizer-watch>
       <a href="events/success-tour/default.aspx">
-        <img src="assets/images/home/latest/success-tour-san-diego.jpg">
+        <img src="assets/images/latest/success-tour-san-diego.jpg">
         <div class="card-section">
           <h5 class="home-latest-card-headline">Upcoming Event</h5>
           <p>The first stop for 2017 &quot;Brian Buffini’s Success Tour&quot;, San Diego, California. Don’t miss the all new &quot;Giver’s Guide to Greatness&quot;.</p>
@@ -142,7 +236,7 @@
     <!-- Carousel Item -->
     <div class="card home-latest-card" data-equalizer-watch>
       <a href="events/gamechangers/default.aspx">
-        <img src="assets/images/home/latest/gamechangers.jpg">
+        <img src="assets/images/latest/gamechangers.jpg">
         <div class="card-section">
           <h5 class="home-latest-card-headline">All New Event</h5>
           <p>All new in 2017 &ndash; this 1-day event will be a Game Changer! Don’t miss Joe Niego, Brian Wildermuth, and a rare appearance from Kevin Buffini!</p>
@@ -152,7 +246,7 @@
     <!-- Carousel Item -->
     <div class="card home-latest-card" data-equalizer-watch>
       <a href="http://blog.buffiniandcompany.com/make-mastery-goal-2017">
-        <img src="assets/images/home/latest/blog-mastery.jpg">
+        <img src="assets/images/latest/blog-mastery.jpg">
         <div class="card-section">
           <h5 class="home-latest-card-headline">It's a Good Life Blog</h5>
           <p>Mastery takes time, and while you may not achieve it in 2017, you can start on the path. With practice and patience, you’ll be able to achieve mastery. Get inspired to achieve it this year!</p>
@@ -162,7 +256,7 @@
     <!-- Carousel Item -->
     <div class="card home-latest-card" data-equalizer-watch>
       <a href="http://podcast.brianbuffini.com/episode-033-rest-run-cycle">
-        <img src="assets/images/home/latest/podcast.jpg">
+        <img src="assets/images/latest/podcast.jpg">
         <div class="card-section">
           <h5 class="home-latest-card-headline">The Brian Buffini Show Podcast</h5>
           <p>Don’t miss &quot;The Rest-Run Cycle&quot; in Episode 33 where Brian explores how to achieve more in less time.</p>
@@ -191,56 +285,56 @@
   <!-- Primary Partners -->
   <div class="row expanded small-up-2 medium-up-4 large-up-8">
     <div class="column column-block">
-      <img src="assets/images/home/partners/berkshire-hathaway-home-services.jpg" class="thumbnail" alt="">
+      <img src="assets/images/partners/berkshire-hathaway-home-services.jpg" class="thumbnail" alt="">
     </div>
     <div class="column column-block">
-      <img src="assets/images/home/partners/century-21.jpg" class="thumbnail" alt="">
+      <img src="assets/images/partners/century-21.jpg" class="thumbnail" alt="">
     </div>
     <div class="column column-block">
-      <img src="assets/images/home/partners/coldwell-banker.jpg" class="thumbnail" alt="">
+      <img src="assets/images/partners/coldwell-banker.jpg" class="thumbnail" alt="">
     </div>
     <div class="column column-block">
-      <img src="assets/images/home/partners/keller-williams.jpg" class="thumbnail" alt="">
+      <img src="assets/images/partners/keller-williams.jpg" class="thumbnail" alt="">
     </div>
     <div class="column column-block">
-      <img src="assets/images/home/partners/prudential.jpg" class="thumbnail" alt="">
+      <img src="assets/images/partners/prudential.jpg" class="thumbnail" alt="">
     </div>
     <div class="column column-block">
-      <img src="assets/images/home/partners/remax.jpg" class="thumbnail" alt="">
+      <img src="assets/images/partners/remax.jpg" class="thumbnail" alt="">
     </div>
     <div class="column column-block">
-      <img src="assets/images/home/partners/private-label-realty.jpg" class="thumbnail" alt="">
+      <img src="assets/images/partners/private-label-realty.jpg" class="thumbnail" alt="">
     </div>
     <div class="column column-block">
-      <img src="assets/images/home/partners/wells-fargo-home-mortgage.jpg" class="thumbnail" alt="">
+      <img src="assets/images/partners/wells-fargo-home-mortgage.jpg" class="thumbnail" alt="">
     </div>
   </div>
   <!-- Additional Partners -->
   <a id="toggleMorePartnerLogos" class="home-partners-toggle-more">View more</a>
   <div id="morePartnerLogos" class="row expanded small-up-2 medium-up-4 large-up-8" style="display:none;">
     <div class="column column-block">
-      <img src="assets/images/home/partners/royal-lepage.jpg" class="thumbnail" alt="">
+      <img src="assets/images/partners/royal-lepage.jpg" class="thumbnail" alt="">
     </div>
     <div class="column column-block">
-      <img src="assets/images/home/partners/weichert-realtors.jpg" class="thumbnail" alt="">
+      <img src="assets/images/partners/weichert-realtors.jpg" class="thumbnail" alt="">
     </div>
     <div class="column column-block">
-      <img src="assets/images/home/partners/realty-executives.jpg" class="thumbnail" alt="">
+      <img src="assets/images/partners/realty-executives.jpg" class="thumbnail" alt="">
     </div>
     <div class="column column-block">
-      <img src="assets/images/home/partners/real-living.jpg" class="thumbnail" alt="">
+      <img src="assets/images/partners/real-living.jpg" class="thumbnail" alt="">
     </div>
     <div class="column column-block">
-      <img src="assets/images/home/partners/pmz-real-estate.jpg" class="thumbnail" alt="">
+      <img src="assets/images/partners/pmz-real-estate.jpg" class="thumbnail" alt="">
     </div>
     <div class="column column-block">
-      <img src="assets/images/home/partners/homesmart.jpg" class="thumbnail" alt="">
+      <img src="assets/images/partners/homesmart.jpg" class="thumbnail" alt="">
     </div>
     <div class="column column-block">
-      <img src="assets/images/home/partners/dominion-lending.jpg" class="thumbnail" alt="">
+      <img src="assets/images/partners/dominion-lending.jpg" class="thumbnail" alt="">
     </div>
     <div class="column column-block">
-      <img src="assets/images/home/partners/exit.jpg" class="thumbnail" alt="">
+      <img src="assets/images/partners/exit.jpg" class="thumbnail" alt="">
     </div> 
   </div>
 </section>
@@ -279,11 +373,16 @@
 </div>
 
 
-</asp:Content>
 
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="assets/scripts/foundation.min.js"></script>
+<script src="assets/scripts/global.js"></script>
+<script src="https://use.typekit.net/lbg1fkf.js"></script>
+<script>try{Typekit.load({ async: true });}catch(e){}</script>
+<script type="text/javascript" src="assets/scripts/owl.carousel.min.js"></script>
 
-<asp:Content ID="Content4" ContentPlaceHolderID="bodyScripts" Runat="Server">
-<script type="text/javascript" src="assets/scripts/primary/libraries/jquery/owl.carousel.min.js"></script>
+<script type="text/javascript">$(document).foundation();</script>  
+
 <script>
   // Responsive Carousel for the 'Latest' section
   $('.owl-carousel').owlCarousel({
@@ -319,5 +418,4 @@
     $('#morePartnerLogos').fadeToggle();
   });
 </script>
-</asp:Content>
 
