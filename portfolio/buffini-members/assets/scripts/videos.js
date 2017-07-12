@@ -5,7 +5,7 @@ $(document).ready(function() {
   
   // B.I.T. O'Brian
   $.each(dataBOB, function() {
-    output += '<a class="column" href="videos.aspx?type=bit-o-brian&id=' + this.id + "&title=" + this.title + '">';
+    output += '<a class="column" href="index.html?type=bit-o-brian' + this.id + "&title=" + this.title + '">';
     output += '<div class="card">';
     output += '<div class="card-image card-image-video">';
     output += '<img src="assets/images/thumbnails/videos/' + this.image + '"' + '>';
@@ -20,7 +20,7 @@ $(document).ready(function() {
 
   // Buffini TV
   $.each(dataBuffiniTV, function() {
-    output += '<a class="column" href="http://broadcast.buffiniandcompany.com/BTV/video.aspx" target="_blank">';
+    output += '<a class="column" href="http://broadcast.buffiniandcompany.com/BTV/video.aspx">';
     output += '<div class="card">';
     output += '<div class="card-image card-image-video">';
     output += '<img src="assets/images/thumbnails/videos/' + this.image + '"' + '>';
@@ -35,7 +35,7 @@ $(document).ready(function() {
 
   // Training Videos
   $.each(dataTrainingVideos, function() {
-    output += '<a class="column" href="videos.aspx?type=training-videos&id=' + this.id + "&title=" + this.title + '">';
+    output += '<a class="column" href="index.html?type=training-videos' + this.id + "&title=" + this.title + '">';
     output += '<div class="card">';
     output += '<div class="card-image card-image-video">';
     output += '<img src="assets/images/thumbnails/videos/' + this.image + '"' + '>';
@@ -50,7 +50,7 @@ $(document).ready(function() {
 
   // Webcast Archive
   $.each(dataWebcastArchive, function() {
-    output += '<a class="column" href="videos.aspx?type=webcast-archive&id=' + this.id + "&title=" + this.title + '">';
+    output += '<a class="column" href="index.html?type=webcast-archive' + this.id + "&title=" + this.title + '">';
     output += '<div class="card">';
     output += '<div class="card-image card-image-video">';
     output += '<img src="assets/images/thumbnails/videos/' + this.image + '"' + '>';
@@ -85,19 +85,19 @@ $(document).ready(function() {
   switch(type) {
     case 'bit-o-brian':
       $('#filter').val("B.I.T. O'Brian").change();
-      $('#breadcrumbVideoCategory').html("<a href='videos.aspx?type=bit-o-brian'>B.I.T. O'Brian</a>");
+      $('#breadcrumbVideoCategory').html("<a href='index.html?type=bit-o-brian'>B.I.T. O'Brian</a>");
       break;
     case 'buffini-tv':
       $('#filter').val("Buffini TV").change();
-      $('#breadcrumbVideoCategory').html('<a href="videos.aspx?type=buffini-tv">Buffini TV</a>');
+      $('#breadcrumbVideoCategory').html('<a href="index.html?type=buffini-tv">Buffini TV</a>');
       break;
     case 'training-videos':
       $('#filter').val('Training Videos').change();
-      $('#breadcrumbVideoCategory').html('<a href="videos.aspx?type=training-videos">Training Videos</a>');
+      $('#breadcrumbVideoCategory').html('<a href="index.html?type=training-videos">Training Videos</a>');
       break;
     case 'webcast-archive':
       $('#filter').val('Webcast Archive').change();
-      $('#breadcrumbVideoCategory').html('<a href="videos.aspx?type=webcast-archive">Webcast Archive</a>');
+      $('#breadcrumbVideoCategory').html('<a href="index.html?type=webcast-archive">Webcast Archive</a>');
       break;
   }  
   
@@ -106,7 +106,6 @@ $(document).ready(function() {
   // if "id" query string variable is present, show videoPlayer with new src from Brightcove 
   if(id) {
     $("#videoPlayer").fadeIn(); 
-    $("#videoPlayer iframe").attr("src", "//players.brightcove.net/775290559001/6c91c761-d62d-4ca0-9ab6-8faa1f43b89c_default/index.html?videoId=" + id);
   }
   // If "title" query string variable is present, add a video title to the top of the page
   if(title) {
@@ -198,18 +197,18 @@ $(document).ready(function() {
       $('#paginationBottom').show();
     }
     if (selection === "B.I.T. O'Brian") {
-      $('#breadcrumbVideoCategory').html("<a href='videos.aspx?type=bit-o-brian'>B.I.T. O'Brian</a>");
+      $('#breadcrumbVideoCategory').html("<a href='index.html?type=bit-o-brian'>B.I.T. O'Brian</a>");
     }
     if (selection === "Buffini TV") {
-      $('#breadcrumbVideoCategory').html("<a href='videos.aspx?type=buffini-tv'>Buffini TV</a>");
+      $('#breadcrumbVideoCategory').html("<a href='index.html?type=buffini-tv'>Buffini TV</a>");
       $('#paginationTop').hide();
       $('#paginationBottom').hide();
     }
     if (selection === "Training Videos") {
-      $('#breadcrumbVideoCategory').html("<a href='videos.aspx?type=training-videos'>Training Videos</a>");
+      $('#breadcrumbVideoCategory').html("<a href='index.html?type=training-videos'>Training Videos</a>");
     }
     if (selection === "Webcast Archive") {
-      $('#breadcrumbVideoCategory').html("<a href='videos.aspx?type=webcast-archive'>Webcast Archive</a>");
+      $('#breadcrumbVideoCategory').html("<a href='index.html?type=webcast-archive'>Webcast Archive</a>");
     }
     
   }).change();
