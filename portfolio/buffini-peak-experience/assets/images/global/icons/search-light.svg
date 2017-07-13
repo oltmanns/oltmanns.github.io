@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 17.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
@@ -8,3 +9,15 @@
 	c93,71,223,67.3,311.9-8.8l177,177L707,575.1z M332.3,442.6c-107.8,0-195.3-87.3-195.3-195.1S224.4,52.2,332.2,52.2
 	c107.8,0,195.3,87.3,195.3,195.1c0,0,0,0.1,0,0.1C527.4,355.1,440.1,442.5,332.3,442.6z"/>
 </svg>
+=======
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 17.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 792 612" enable-background="new 0 0 792 612" xml:space="preserve">
+<title>searchiconbold</title>
+<path fill="#FFFFFF" d="M707,575.1l-178-178c83.1-108.9,62.2-264.6-46.7-347.7S217.7-12.8,134.6,96.2s-62.2,264.6,46.7,347.7
+	c93,71,223,67.3,311.9-8.8l177,177L707,575.1z M332.3,442.6c-107.8,0-195.3-87.3-195.3-195.1S224.4,52.2,332.2,52.2
+	c107.8,0,195.3,87.3,195.3,195.1c0,0,0,0.1,0,0.1C527.4,355.1,440.1,442.5,332.3,442.6z"/>
+</svg>
+>>>>>>> 30f9ab01cfb27abf2e655b0541d003707eeaf5f6
