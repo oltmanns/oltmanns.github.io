@@ -1,4 +1,4 @@
-/*$(function() {
+$(function() {
 
     $("input,textarea").jqBootstrapValidation({
         preventSubmit: true,
@@ -18,7 +18,7 @@
                 firstName = name.split(' ').slice(0, -1).join(' ');
             }
             $.ajax({
-                url: "././mail/contact_me.php",
+                url: "https://formspree.io/dgoltmanns@gmail.com",
                 type: "POST",
                 data: {
                     name: name,
@@ -62,7 +62,7 @@
         $(this).tab("show");
     });
 });
-*/
+
 
 /*When clicking on Full hide fail/success boxes */
 $('#name').focus(function() {
