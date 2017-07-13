@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+  
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="stylesheet" href="assets/styles/css/global.min.css" type="text/css">
+	<title>Video Library</title>
+</head>
+  
+<body>
+
+
+<div class="off-canvas-wrapper">
+<div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+
+<!-- off-canvas title bar for smaller screens -->
+<div class="title-bar hide-for-large" data-hide-for="large">
+	<div class="title-bar-left">
+		<span class="title-bar-title p20">
+			<a href="#"><img src="assets/images/logos/buffini-and-company.jpg" width="110"></a>
+		</span>
+	</div>
+	<div class="title-bar-right p20">
+		<button class="menu-icon" type="button" data-open="offCanvasLeft" aria-expanded="false" aria-controls="offCanvasLeft"></button>
+	</div>
+</div>
+
+<!-- off-canvas left menu -->
+<div class="off-canvas position-left reveal-for-large is-transition-push" id="offCanvasLeft" data-off-canvas="r6aggo-off-canvas" aria-hidden="false">
+
+	<!-- Logo / Tagline -->
+	<a href="#">
+		<img src="assets/images/logos/buffini-and-company.jpg" width="160" class="pt40 pb40 float-center show-for-large">
+	</a>
+
+	<!-- Menu -->
+	<ul id="primary-menu" class="vertical menu" data-accordion-menu data-multi-open="false" role="menu">
+		<li id="start" role="menuitem">
+		<a href="#">Get Started</a>
+		</li>
+		<li id="business" role="menuitem">
+		<a href="#">Business Tools</a>
+		</li>
+		<li id="resources" role="menuitem" class="is-accordion-submenu-parent" aria-haspopup="true" aria-label="Resources &amp; Training" aria-controls="olv0yu-acc-menu" aria-expanded="true">
+		<a href="#">Resources &amp; Training</a>
+		<ul class="menu vertical nested submenu is-accordion-submenu is-active" data-submenu="" role="menu" aria-labelledby="resources" aria-hidden="false" id="olv0yu-acc-menu" style="display: block;">
+		<li role="menuitem" class="is-submenu-item is-accordion-submenu-item"><a href="#">Resource Library</a></li>
+		<li role="menuitem" class="is-submenu-item is-accordion-submenu-item"><a href="#" class="active">Video Library</a></li>
+		<li role="menuitem" class="is-submenu-item is-accordion-submenu-item"><a href="#">Buffini Rewards</a></li>
+		<li role="menuitem" class="is-submenu-item is-accordion-submenu-item"><a href="#">Buffini TV</a></li>
+		<li role="menuitem" class="is-submenu-item is-accordion-submenu-item"><a href="#">The Brian Buffini Show</a></li>
+		<li role="menuitem" class="is-submenu-item is-accordion-submenu-item"><a href="#">Buffini &amp; Company Blog</a></li>
+		<li role="menuitem" class="is-submenu-item is-accordion-submenu-item"><a href="#">Buffini &amp; Company Magazine</a></li>
+		</ul>
+		</li>
+		<li id="events" role="menuitem">
+		<a href="#">Events &amp; Networking</a>
+		</li>
+		<li id="contact" role="menuitem">
+		<a href="#">Contact Us</a>
+		</li>
+	</ul>
+
+	<div class="account">
+		<a href="#">Log Out</a>
+		<a href="#">Settings</a>
+	</div>
+
+</div>
+
+<!-- page content -->
+<div class="off-canvas-content" data-off-canvas-content="">
+      
+
+<!-- Header -->
+<div id="header" class="header header-videos header-small">
+  <div class="row mb30">
+		<div class="columns medium-10 small-centered large-centered">
+      <div class="row">
+        <div class="columns medium-12 vertical-center">
+          <a href="videos.aspx"><h1>Video Library</h1></a>
+        </div>
+      </div>
+		</div>
+	</div>
+</div>
+
+
+<!-- Breadcrumbs -->
+<nav id="breadcrumbs" class="breadcrumbs-container" style="display:none;">
+  <div class="row">
+    <div class="columns medium-10 small-centered large-centered">
+      <ul class="breadcrumbs">
+        <li><a href="index.html">Video Library</a></li>
+        <li id="breadcrumbVideoCategory"></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<!-- Main Content -->
+<section class="row mt80 mb80">
+	<div class="columns medium-10 small-centered large-centered">
+
+    <!-- Resource Container -->
+  	<div id="videoContainer">
+
+      <!-- Video Player -->
+      <h3 id="videoTitle"></h3>
+      <div id="videoPlayer" class="flex-video widescreen mt20 mb80" style="display: none;"> 
+        <img src="http://placehold.it/1600x900" />
+      </div>
+
+      <!-- Search / Filter -->
+      <div id="videoFinder" class="row pb40">
+        <div id="filterContainer" class="columns medium-4">
+          <label>Filter by:
+          <select id="filter" name="jsCategory">
+            <option selected="selected" value="">All Categories</option>
+            <option value="B.I.T. O'Brian">B.I.T. O'Brian</option>
+            <option value="Buffini TV">Buffini TV</option>
+            <option value="Training Videos">Training Videos</option>
+            <option value="Webcast Archive">Webcast Archive</option>
+          </select>
+          </label>
+        </div>
+        <div class="columns medium-8">
+          <label>Search for:
+          <input id="search" class="search fuzzy-search" type="text" placeholder="search" autocomplete="off">
+          </label>
+        </div>
+      </div>
+
+      <!-- Top-Level Categories -->
+	    <div id="videoCategories" class="row small-up-1 medium-up-2 large-up-2" data-equalizer data-equalize-by-row="true">
+		    <div class="column">
+		      <a href="?type=bit-o-brian">
+	          <div class="card">
+		          <div class="card-category-image">
+		            <img src="assets/images/logos/bit-o-brian-white.png" alt="">
+		          </div>
+		          <div class="card-content">
+		            <span class="card-title">B.I.T. O'Brian</span>
+		          </div>
+	          </div>
+	        </a>    
+		    </div>
+		    <div class="column">
+	        <a href="?type=buffini-tv">
+	          <div class="card">
+		          <div class="card-category-image">
+		            <img src="assets/images/logos/buffini-tv-white.png" alt="">
+		          </div>
+		          <div class="card-content">
+		            <span class="card-title">Buffini TV</span>
+		          </div>
+	          </div>
+	        </a>    
+		    </div>
+		    <div class="column">
+		      <a href="?type=training-videos">
+	          <div class="card">
+		          <div class="card-category-image">
+		            <img src="assets/images/logos/training-videos-white.png" alt="">
+		          </div>
+		          <div class="card-content">
+		            <span class="card-title">Training Videos</span>
+		          </div>
+	          </div>
+	        </a>    
+		    </div>
+		    <div class="column">
+	        <a href="?type=webcast-archive">
+	          <div class="card">
+		          <div class="card-category-image">
+		            <img src="assets/images/logos/webcast-archive-white.png" alt="">
+		          </div>
+		          <div class="card-content">
+		            <span class="card-title">Webcast Archive</span>
+		          </div>
+	          </div>
+	        </a>
+		    </div>
+	    </div>
+
+      <!-- Video List -->
+      <!-- This section is populated with the javaScript below -->
+		  <ul id="paginationTop" class="pagination pagination-top" style="display:none;"></ul>
+		  <div id="videoList" class="list row small-up-2 medium-up-2 large-up-3" data-equalizer data-equalize-by-row="true">
+		  </div>
+		  <ul id="paginationBottom" class="pagination pagination-bottom" style="display:none;"></ul>
+		    
+		    
+    </div>
+  </div>
+</section>
+		
+
+</div>
+
+<!-- end off-canvas wrappers -->
+</div>
+</div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="assets/scripts/foundation.min.js"></script>	
+<script src="assets/scripts/global.js"></script>
+<script src="assets/scripts/list.min.js"></script>
+<script src="assets/scripts/list.fuzzysearch.min.js"></script>
+<script src="assets/scripts/list.pagination.min.js"></script>	
+<script src="//use.typekit.net/vin1ioq.js"></script>
+
+
+<!-- Data -->
+<script src="assets/data/data-bit-o-brian.js"></script>
+<script src="assets/data/data-buffini-tv.js"></script>
+<script src="assets/data/data-training-videos.js"></script>
+<script src="assets/data/data-webcast-archive.js"></script>
+<!-- Data Rendering -->
+<script src="assets/scripts/videos.js"></script>
+
+
+<div class="js-off-canvas-overlay is-overlay-fixed"></div>
+
+	
+</body>
+</html>
