@@ -71,6 +71,8 @@ h6 {
 
 .bg-light-gray {
     background-color: #f7f7f7;
+		border-top:1px solid rgba(0, 0, 0, 0.05);
+		border-bottom:1px solid rgba(0, 0, 0, 0.05);
 }
 
 .bg-darkest-gray {
@@ -793,8 +795,14 @@ ul.social-buttons li a:active {
 }
 
 .portfolio-modal .modal-content h2 {
-    margin-bottom: 15px;
-    font-size: 3em;
+	margin-bottom: 15px;
+	font-size: 2em;
+}
+
+@media(min-width:768px) {
+	.portfolio-modal .modal-content h2 {
+		font-size: 3em;
+	}
 }
 
 .portfolio-modal .modal-content p {
