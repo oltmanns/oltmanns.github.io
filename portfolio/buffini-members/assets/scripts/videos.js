@@ -5,7 +5,7 @@ $(document).ready(function() {
   
   // B.I.T. O'Brian
   $.each(dataBOB, function() {
-    output += '<a class="column" href="index.html?type=bit-o-brian' + this.id + "&title=" + this.title + '">';
+    output += '<a class="column" href="index.html?type=bit-o-brian' + '&id=' + this.id + "&title=" + this.title + '">';
     output += '<div class="card">';
     output += '<div class="card-image card-image-video">';
     output += '<img src="assets/images/thumbnails/videos/' + this.image + '"' + '>';
@@ -20,7 +20,7 @@ $(document).ready(function() {
 
   // Buffini TV
   $.each(dataBuffiniTV, function() {
-    output += '<a class="column" href="http://broadcast.buffiniandcompany.com/BTV/video.aspx">';
+    output += '<a class="column" href="index.html?type=buffini-tv' + '&id=' + this.id + "&title=" + this.title + '">';
     output += '<div class="card">';
     output += '<div class="card-image card-image-video">';
     output += '<img src="assets/images/thumbnails/videos/' + this.image + '"' + '>';
@@ -35,7 +35,7 @@ $(document).ready(function() {
 
   // Training Videos
   $.each(dataTrainingVideos, function() {
-    output += '<a class="column" href="index.html?type=training-videos' + this.id + "&title=" + this.title + '">';
+    output += '<a class="column" href="index.html?type=training-videos' + '&id=' + this.id + "&title=" + this.title + '">';
     output += '<div class="card">';
     output += '<div class="card-image card-image-video">';
     output += '<img src="assets/images/thumbnails/videos/' + this.image + '"' + '>';
@@ -50,7 +50,7 @@ $(document).ready(function() {
 
   // Webcast Archive
   $.each(dataWebcastArchive, function() {
-    output += '<a class="column" href="index.html?type=webcast-archive' + this.id + "&title=" + this.title + '">';
+    output += '<a class="column" href="index.html?type=webcast-archive' + '&id=' + this.id + "&title=" + this.title + '">';
     output += '<div class="card">';
     output += '<div class="card-image card-image-video">';
     output += '<img src="assets/images/thumbnails/videos/' + this.image + '"' + '>';
@@ -201,8 +201,6 @@ $(document).ready(function() {
     }
     if (selection === "Buffini TV") {
       $('#breadcrumbVideoCategory').html("<a href='index.html?type=buffini-tv'>Buffini TV</a>");
-      $('#paginationTop').hide();
-      $('#paginationBottom').hide();
     }
     if (selection === "Training Videos") {
       $('#breadcrumbVideoCategory').html("<a href='index.html?type=training-videos'>Training Videos</a>");
@@ -212,6 +210,11 @@ $(document).ready(function() {
     }
     
   }).change();
+
+	// Show alert when video is clicked
+	$('#videoPlayer').on('click', function() {
+		alert('Sorry, this is only a placeholder for demonstration purposes.');
+	});
 
 });
   

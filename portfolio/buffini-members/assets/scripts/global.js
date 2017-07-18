@@ -52,3 +52,7 @@ function getQueryVariable(variable) {
   }
   return (false);
 }
+
+$('#primary-menu').on('click', function() {
+	alert('Sorry, these links are inactive. This is only a demo site.');
+});
