@@ -31,8 +31,9 @@ h6 {
 }
 
 img {
-  display: flex;
   max-width: 100%;
+  height: auto;
+  vertical-align: middle;
 }
 
 p {
@@ -273,6 +274,7 @@ Section: Portfolio
 }
 
 .portfolio-card-image {
+  display: flex;
   max-width: 100%;
   height: auto;
 }
@@ -306,6 +308,11 @@ Section: Portfolio
 
 .portfolio-card-stack {
   display: flex;
+}
+
+.portfolio-card-stack img {
+  width: 40px;
+  height: 40px;
 }
 
 /* -----------------------------------------------
@@ -349,6 +356,13 @@ Section: Skills
   color: rgba(255, 255, 255, 0.7);
   margin-left: 0.5rem;
   margin-right: 0.5rem;
+  text-align: center;
+}
+
+@media all and (max-width: 640px) {
+  .skill-nav-link {
+    font-size: 0.75rem;
+  }
 }
 
 .skill-nav-link.is-active {
@@ -519,6 +533,19 @@ Section: Experience
   font-weight: bold;
   text-transform: uppercase;
   color: #777;
+}
+
+@media all and (max-width: 640px) {
+  .timeline-item {
+    margin-bottom: 1rem;
+  }
+  .timeline-content {
+    padding-top: 1rem;
+    padding-left: 0.5rem;
+  }
+  .timeline-image {
+    width: 80px;
+  }
 }
 
 @media all and (max-width: 400px) {
