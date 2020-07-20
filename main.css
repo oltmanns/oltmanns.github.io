@@ -224,7 +224,7 @@ Section: Portfolio
   margin-top: 69px;
 }
 
-@media all and (max-width: 640px) {
+@media all and (max-width: 768px) {
   .section-portfolio {
     margin-top: 0;
   }
