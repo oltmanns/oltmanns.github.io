@@ -151,6 +151,8 @@ a {
     position: static;
   }
   .global-header {
+    position: sticky;
+    top: -70px;
     flex-direction: column;
   }
   .global-header-nav {
