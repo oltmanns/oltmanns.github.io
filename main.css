@@ -137,8 +137,11 @@ a {
     align-items: center;
     font-size: 0.825rem;
   }
-  .global-header-nav {
-    display: none;
+  .global-header {
+    padding: 1rem 0;
+  }
+  .global-header-nav a {
+    font-size: 0.8rem;
   }
 }
 
@@ -147,8 +150,19 @@ a {
     justify-content: center;
     position: static;
   }
+  .global-header {
+    flex-direction: column;
+  }
   .global-header-nav {
-    display: none;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.09);
+  }
+  .global-header-nav a {
+    font-size: 0.9rem;
+    margin: 1rem 0 0 0;
+    padding: 0.33rem;
+    letter-spacing: 0;
   }
 }
 
@@ -593,7 +607,7 @@ Section: Experience
     width: 100%;
   }
   .timeline-content-secondary {
-    font-size: 0.825rem;
+    font-size: 0.9rem;
   }
 }
 
