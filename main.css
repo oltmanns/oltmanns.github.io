@@ -566,12 +566,15 @@ Section: Experience
   font-weight: bold;
   color: #333 !important;
   text-decoration: none;
+  margin-bottom: 0.5rem;
 }
 
 .timeline-organization {
   font-size: 1.25rem;
   font-weight: bold;
   color: #333;
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
 }
 
 .timeline-title {
@@ -583,6 +586,17 @@ Section: Experience
 
 @media all and (max-width: 640px) {
   .timeline-item {
+    flex-direction: column;
+  }
+  .timeline-content {
+    flex-direction: column;
+  }
+  .timeline-content,
+  .timeline-content-primary,
+  .timeline-content-secondary {
+    width: 100%;
+  }
+  .timeline-item {
     margin-bottom: 1rem;
   }
   .timeline-content {
@@ -591,6 +605,7 @@ Section: Experience
   }
   .timeline-image {
     width: 60px;
+    margin-left: -2rem;
   }
   .timeline-image img {
     width: 60px;
@@ -599,21 +614,10 @@ Section: Experience
 }
 
 @media all and (max-width: 400px) {
-  .timeline-item {
-    flex-direction: column;
-  }
-  .timeline-content {
-    flex-direction: column;
-  }
   .timeline-date,
   .timeline-organization,
   .timeline-title {
     font-size: 1rem;
-  }
-  .timeline-content,
-  .timeline-content-primary,
-  .timeline-content-secondary {
-    width: 100%;
   }
   .timeline-content-secondary {
     font-size: 0.9rem;
