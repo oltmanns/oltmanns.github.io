@@ -1,6 +1,27 @@
 /* -----------------------------------------------
 Base
 ----------------------------------------------- */
+@font-face {
+  font-family: 'Kaushan Script';
+  font-style: normal;
+  font-weight: 400;
+  src: local(''), url('/fonts/kaushan-script-v9-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */ url('/fonts/kaushan-script-v9-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  src: local(''), url('/fonts/montserrat-v15-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */ url('/fonts/montserrat-v15-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  src: local(''), url('/fonts/montserrat-v15-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */ url('/fonts/montserrat-v15-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
 *,
 ::after,
 ::before {
@@ -10,7 +31,7 @@ Base
 html,
 body {
   margin: 0;
-  font-family: Montserrat, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Montserrat', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: #eee;
@@ -26,7 +47,7 @@ h5,
 h6 {
   margin-top: 0;
   text-transform: uppercase;
-  font-family: Montserrat, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 700;
 }
 
@@ -88,6 +109,11 @@ a {
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
+.global-header-title {
+  display: flex;
+  align-items: center;
+}
+
 .global-header-name {
   font-size: 1.5rem;
   font-family: 'Kaushan Script', 'Helvetica Neue', Helvetica, Arial, cursive;
@@ -99,7 +125,7 @@ a {
   font-size: 0.825rem;
   text-transform: uppercase;
   margin-left: 1rem;
-  color: rgba(255, 255, 255, 0.4);
+  color: #fed136;
   transition: all 0.3s ease-in-out;
 }
 
@@ -158,6 +184,9 @@ a {
     top: -70px;
     flex-direction: column;
   }
+  .global-header-role {
+    display: none;
+  }
   .global-header-nav {
     margin-top: 1rem;
     padding-top: 1rem;
@@ -198,8 +227,8 @@ Main
 .section-subheading {
   margin-bottom: 2rem;
   text-transform: none;
-  font-family: 'Droid Serif', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-size: 16px;
+  font-family: Georgia, serif;
+  font-size: 1.125rem;
   font-style: italic;
   font-weight: 400;
   text-align: center;
@@ -367,7 +396,7 @@ Section: Skills
   align-items: center;
   justify-content: center;
   margin-bottom: 2rem;
-  font-family: 'Droid Serif', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: Georgia, serif;
   font-style: italic;
 }
 
@@ -476,7 +505,7 @@ Section: Contact
   border-color: #fed136;
   border-radius: 3px;
   text-transform: uppercase;
-  font-family: Montserrat, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 18px;
   font-weight: 700;
   color: #fff;
@@ -547,7 +576,7 @@ Section: Experience
 
 .timeline-content-secondary {
   width: 60%;
-  font-family: 'Roboto Slab', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Monserrat', sans-serif;
   font-size: 1rem;
   line-height: 1.3;
   color: #777;
@@ -619,9 +648,6 @@ Section: Experience
   .timeline-organization,
   .timeline-title {
     font-size: 1rem;
-  }
-  .timeline-content-secondary {
-    font-size: 0.9rem;
   }
 }
 
