@@ -56,8 +56,16 @@ function handleSkillNavToggle() {
   skillLinks.forEach((link) => link.addEventListener('click', handleLinkClicks));
 }
 
+function handleContactFormSubmit() {
+  const form = document.querySelector('#contactForm');
+  form.addEventListener('submit', function (e) {
+    form.reset();
+  });
+}
+
 (function () {
   useSmoothScrolling();
   highlightNavOnScroll();
   handleSkillNavToggle();
+  handleContactFormSubmit();
 })();
