@@ -174,7 +174,7 @@ a {
   }
 }
 
-@media all and (max-width: 760px) {
+@media all and (max-width: 800px) {
   .global-header {
     justify-content: center;
     position: static;
