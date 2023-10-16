@@ -174,7 +174,7 @@ a {
   }
 }
 
-@media all and (max-width: 800px) {
+@media all and (max-width: 640px) {
   .global-header {
     justify-content: center;
     position: static;
@@ -183,9 +183,6 @@ a {
     position: sticky;
     top: -70px;
     flex-direction: column;
-  }
-  .global-header-role {
-    display: none;
   }
   .global-header-nav {
     margin-top: 1rem;
