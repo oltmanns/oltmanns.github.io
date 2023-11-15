@@ -22,6 +22,11 @@ Base
   src: local(''), url('/fonts/montserrat-v15-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */ url('/fonts/montserrat-v15-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
+:root {
+  --project-section-space: 4rem;
+  --primary-color: #fed136;
+}
+
 *,
 ::after,
 ::before {
@@ -37,6 +42,7 @@ body {
   background: #eee;
   color: #777;
   line-height: 1.5;
+  scroll-behavior: smooth;
 }
 
 h1,
@@ -63,6 +69,58 @@ p {
 
 a {
   text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+
+/* -----------------------------------------------
+Global
+----------------------------------------------- */
+.btn-scroll-top {
+  position: fixed;
+  align-items: center;
+  justify-content: center;
+  bottom: 2rem;
+  right: 2rem;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 100%;
+  font-size: 1rem;
+  border: none;
+  background: rgba(100, 100, 100, 0.4);
+  color: #fff;
+  font-family: sans-serif;
+  cursor: pointer;
+}
+
+.icon-top-arrow {
+  border: solid #fff;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(-135deg);
+}
+
+.breadcrumbs {
+  margin-bottom: 2rem;
+}
+
+.breadcrumbs a, .breadcrumbs span {
+  color: rgba(200, 200, 200, 0.7);
+}
+
+.breadcrumbs a:hover {
+  color: var(--primary-color);
+}
+
+.breadcrumbs *:first-child::before {
+  content: "";
+}
+
+.breadcrumbs *::before {
+  content: "/\00a0";
+  display: inline-flex;
+  padding: 0 0.25rem;
+  color: rgba(100, 100, 100, 0.6);
 }
 
 .hero {
@@ -105,7 +163,7 @@ a {
   width: 100%;
   padding: 1rem;
   z-index: 100;
-  background: #222;
+  background: #111;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
@@ -117,16 +175,8 @@ a {
 .global-header-name {
   font-size: 1.5rem;
   font-family: 'Kaushan Script', 'Helvetica Neue', Helvetica, Arial, cursive;
-  color: #fed136;
+  color: var(--primary-color);
   text-decoration: none;
-}
-
-.global-header-role {
-  font-size: 0.825rem;
-  text-transform: uppercase;
-  margin-left: 1rem;
-  color: #fed136;
-  transition: all 0.3s ease-in-out;
 }
 
 .global-header-nav a {
@@ -141,17 +191,17 @@ a {
 }
 
 .global-header-nav a:hover {
-  color: #ccc;
+  color: var(--primary-color);
 }
 
 .global-header-nav a.active {
-  color: #fed136;
+  color: var(--primary-color);
 }
 
 .global-footer {
   display: flex;
   padding: 1.5rem;
-  justify-content: space-between;
+  justify-content: center;
   background: transparent;
   border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
@@ -196,6 +246,27 @@ a {
     letter-spacing: 0;
   }
 }
+
+.mb-1 {
+  margin-bottom: .25rem !important;
+}
+
+.mb-2 {
+  margin-bottom: .5rem !important;
+}
+
+.mb-3 {
+  margin-bottom: 1rem !important;
+}
+
+.mb-4 {
+  margin-bottom: 2rem !important;
+}
+
+.mb-5 {
+  margin-bottom: 4rem !important;
+}
+
 
 /* -----------------------------------------------
 Main
@@ -262,20 +333,20 @@ Components
 }
 
 /* -----------------------------------------------
-Section: Portfolio
+Section: Work
 ----------------------------------------------- */
-.section-portfolio {
+.section-work {
   background: #eee;
   margin-top: 69px;
 }
 
 @media all and (max-width: 768px) {
-  .section-portfolio {
+  .section-work {
     margin-top: 0;
   }
 }
 
-.portfolio-container {
+.work-container {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -286,7 +357,7 @@ Section: Portfolio
   color: #fff;
 }
 
-.portfolio-card {
+.work-card {
   flex-grow: 1;
   flex: 0 0 48%;
   max-width: 48%;
@@ -298,12 +369,12 @@ Section: Portfolio
   transition: all 0.3s ease-in-out;
 }
 
-.portfolio-card:hover {
+.work-card:hover {
   background: #fff;
 }
 
 @media all and (max-width: 1024px) {
-  .portfolio-card {
+  .work-card {
     flex: 0 0 48%;
     max-width: 48%;
     margin-bottom: 2rem;
@@ -311,25 +382,25 @@ Section: Portfolio
 }
 
 @media all and (max-width: 640px) {
-  .portfolio-card {
+  .work-card {
     flex: 0 0 100%;
     max-width: 100%;
     /* padding: 1rem; */
   }
 }
 
-.portfolio-card-image {
+.work-card-image {
   display: flex;
   max-width: 100%;
   height: auto;
 }
 
-.portfolio-card-body {
+.work-card-body {
   border-top: 1px solid rgba(0, 0, 0, 0.1);
   padding: 1rem;
 }
 
-.portfolio-card-title {
+.work-card-title {
   font-size: 1.25rem;
   line-height: 1.1;
   margin-bottom: 0.5rem;
@@ -337,25 +408,25 @@ Section: Portfolio
   color: #444;
 }
 
-.portfolio-card-company {
+.work-card-company {
   display: flex;
   font-size: 1rem;
   margin-bottom: 0.5rem;
   color: #444;
 }
 
-.portfolio-card-description {
+.work-card-description {
   font-size: 0.9rem;
   line-height: 1.4;
   margin-bottom: 0.75rem;
   color: #999;
 }
 
-.portfolio-card-stack {
+.work-card-stack {
   display: flex;
 }
 
-.portfolio-card-stack img {
+.work-card-stack img {
   width: 40px;
   height: 40px;
 }
@@ -411,7 +482,7 @@ Section: Skills
 }
 
 .skill-nav-link.is-active {
-  color: #fed136;
+  color: var(--primary-color);
 }
 
 .skill-list {
@@ -499,7 +570,7 @@ Section: Contact
   line-height: 1.42857143;
   user-select: none;
   padding: 20px 40px;
-  border-color: #fed136;
+  border-color: var(--primary-color);
   border-radius: 3px;
   text-transform: uppercase;
   font-family: 'Montserrat', sans-serif;
@@ -507,7 +578,7 @@ Section: Contact
   font-weight: 700;
   color: #fff;
   cursor: pointer;
-  background-color: #fed136;
+  background-color: var(--primary-color);
 }
 
 @media all and (max-width: 640px) {
