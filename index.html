@@ -332,22 +332,14 @@
     <section id="contact" class="section section-contact">
       <h1 class="section-heading text-white">Contact Me</h1>
       <h6 class="section-subheading">I will be in touch soon!</h6>
-      <form id="contactForm" class="contact-form" name="sentMessage" method="POST" action="https://formspree.io/dgoltmanns@gmail.com">
-        <div class="contact-form-group">
-          <div class="contact-form-primary">
-            <input id="name" name="name" type="text" placeholder="Your Name *" required />
-            <input id="email" name="_replyto" type="text" placeholder="Your Email *" required />
-          </div>
-          <div class="contact-form-secondary">
-            <textarea id="message" name="message" placeholder="Your Message *" required></textarea>
-          </div>
-        </div>
-        <div class="contact-form-group">
-          <button type="submit" class="contact-form-button">
-            Send
-          </button>
-        </div>
-      </form>
+      <div class="contact-links">
+        <a href="" data-part1="dgoltmanns" data-part2="gmail" data-part3="com">
+          <img src="/images/icon-email.svg" width="24" alt="Email icon" /> Email
+        </a>
+        <a href="https://www.linkedin.com/in/daniel-oltmanns-9a497325">
+          <img src="/images/icon-linkedin.svg" width="24" alt="LinkedIn Icon" /> LinkedIn
+        </a>  
+      </div>
     </section>
 
     <!-- Footer -->
@@ -360,8 +352,8 @@
     <script src="./main.js"></script>
     <script>
         handleSkillNavToggle();
-        handleContactFormSubmit();
         handleScrollToTopButton();
+        handleSetEmail();
     </script>
   </body>
 </html>

@@ -22,13 +22,6 @@ function handleSkillNavToggle() {
   skillLinks.forEach((link) => link.addEventListener('click', handleLinkClicks));
 }
 
-function handleContactFormSubmit() {
-  const form = document.querySelector('#contactForm');
-  form.addEventListener('submit', function (e) {
-    form.reset();
-  });
-}
-
 function handleScrollToTopButton() {
 
   var btnScrollToTop = document.createElement("button");
@@ -55,5 +48,12 @@ function handleScrollToTopButton() {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
   })
- 
+}
+
+function handleSetEmail() {
+  const links = document.querySelectorAll("[data-part1][data-part2][data-part3]");
+  for (const link of links) {
+    const attrs = link.dataset;
+    link.setAttribute("href", `mailto:${attrs.part1}@${attrs.part2}.${attrs.part3}`);
+  }
 }
