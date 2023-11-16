@@ -50,10 +50,33 @@ function handleScrollToTopButton() {
   })
 }
 
+function highlightNavOnScroll() {
+  const nav = document.querySelector('#globalNav');
+  const sections = Array.from(nav.children).map((item) => document.querySelector(item.hash));
+  const sectionPadding = 200;
+  if (document.body.scrollTop === 0) {
+    nav.querySelector(`a[href="#work"]`).classList.add('active');
+  }
+  function handleScroll() {
+    let fromTop = window.scrollY + nav.clientHeight + sectionPadding;
+    let visibleSection;
+    if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 100) {
+      visibleSection = sections[sections.length - 1];
+    } else {
+      visibleSection = sections.find((section) => section.offsetTop + section.clientHeight > fromTop);
+    }
+    Array.from(nav.querySelectorAll('a')).forEach((link) => link.classList.remove('active'));
+    document.querySelector(`a[href="#${visibleSection.id}"]`).classList.add('active');
+  }
+  window.addEventListener('scroll', debounce(handleScroll, 20));
+}
+
 function handleSetEmail() {
   const links = document.querySelectorAll("[data-part1][data-part2][data-part3]");
   for (const link of links) {
     const attrs = link.dataset;
-    link.setAttribute("href", `mailto:${attrs.part1}@${attrs.part2}.${attrs.part3}`);
+    setTimeout(() => {
+      link.setAttribute("href", `mailto:${attrs.part1}@${attrs.part2}.${attrs.part3}`);
+    }, 2000);
   }
 }
