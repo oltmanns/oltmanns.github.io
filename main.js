@@ -32,6 +32,7 @@ function handleContactFormSubmit() {
 function handleScrollToTopButton() {
 
   var btnScrollToTop = document.createElement("button");
+  btnScrollToTop.style.display = "none";
   var iconArrow = document.createElement("i");
   var showHeight = 300;
 
