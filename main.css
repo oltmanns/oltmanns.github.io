@@ -84,7 +84,7 @@ Global
   border-radius: 100%;
   font-size: 1rem;
   border: none;
-  background: rgba(100, 100, 100, 0.4);
+  background: rgba(100, 100, 100, 0.75);
   color: #fff;
   font-family: sans-serif;
   cursor: pointer;
@@ -206,6 +206,8 @@ Global
     letter-spacing: 0;
   }
   .breadcrumbs {
+    position: static;
+    top: 0;
     font-size: .75rem;
   }
   .breadcrumbs *::before {
@@ -318,6 +320,7 @@ Section: Intro
 .section-intro {
   background: #222;
   margin-top: 69px;
+  padding: 6rem 1rem;
 }
 
 .section-intro * {
@@ -329,11 +332,13 @@ Section: Intro
   margin-bottom: 1rem;
   font-family: 'Kaushan Script';
   text-transform: none;
+  color: var(--primary-color);
 }
 
 .section-intro .section-subheading {
   margin-bottom: 0;
   line-height: 1.1;
+  color: #ddd;
 }
 
 @media all and (max-width: 640px) {
@@ -408,6 +413,7 @@ Section: Work
   display: flex;
   max-width: 100%;
   height: auto;
+ filter: sepia(40%);
 }
 
 .work-card-body {
