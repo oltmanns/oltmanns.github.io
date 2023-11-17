@@ -22,6 +22,19 @@ function handleSkillNavToggle() {
   skillLinks.forEach((link) => link.addEventListener('click', handleLinkClicks));
 }
 
+function useSmoothScrolling() {
+  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+    if (anchor.hash.length > 2) {
+      anchor.addEventListener("click", function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute("href")).scrollIntoView({
+          behavior: "smooth",
+        });
+      });
+    }
+  });
+}
+
 function handleScrollToTopButton() {
 
   var btnScrollToTop = document.createElement("button");
@@ -80,3 +93,17 @@ function handleSetEmail() {
     }, 2000);
   }
 }
+
+function setCopyrightDate() {
+  const copyright = document.querySelector("#copyright");
+  if (copyright) {
+    var year = document.createTextNode(new Date().getFullYear());
+    copyright.appendChild(year);
+  }
+}
+
+// Invoke global functions
+(function (){ 
+  handleScrollToTopButton();
+  setCopyrightDate();
+})();

@@ -42,7 +42,6 @@ body {
   background: #eee;
   color: #777;
   line-height: 1.5;
-  scroll-behavior: smooth;
 }
 
 h1,
@@ -52,7 +51,6 @@ h4,
 h5,
 h6 {
   margin-top: 0;
-  text-transform: uppercase;
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
 }
@@ -101,15 +99,16 @@ Global
 }
 
 .breadcrumbs {
+  position: sticky;
+  top: 69px;
   width: 100%;
   background: #2e2e2e;
   padding: 1rem 1rem 1.25rem 1rem;
   text-align: center;
-  /* border-top: 1px solid rgba(255, 255, 255, 0.1); */
 }
 
 .breadcrumbs a, .breadcrumbs span {
-  color: #999;
+  color: #ccc;
   line-height: 1;
 }
 
@@ -128,37 +127,6 @@ Global
   font-size: 1.5rem;
   padding: 0 0.5rem;
   color: rgba(100, 100, 100, 0.5);
-}
-
-.hero {
-  width: 100%;
-  display: flex;
-  font-size: 2rem;
-  align-items: center;
-  justify-content: center;
-  margin-top: 69px;
-  padding: 5rem 1rem;
-  background: #000;
-  @media only screen and (max-width: 640px) {
-    height: auto;
-    padding: 3rem 1rem;
-    font-size: 1.5rem;
-  }
-}
-
-.global-container {
-  background: #eee;
-  animation: fadeInGlobalContainer 1.5s;
-  transition: all 0.3s ease-in-out;
-}
-
-@keyframes fadeInGlobalContainer {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
 }
 
 .global-header {
@@ -188,8 +156,7 @@ Global
 
 .global-header-nav a {
   color: #ddd;
-  text-transform: uppercase;
-  font-size: 0.825rem;
+  font-size: 1rem;
   font-weight: 400;
   letter-spacing: 1px;
   text-decoration: none;
@@ -217,20 +184,6 @@ Global
   color: #777;
 }
 
-@media all and (max-width: 400px) {
-  .global-footer {
-    flex-direction: column;
-    align-items: center;
-    font-size: 0.825rem;
-  }
-  .global-header {
-    padding: 1rem 0;
-  }
-  .global-header-nav a {
-    font-size: 0.8rem;
-  }
-}
-
 @media all and (max-width: 640px) {
   .global-header {
     justify-content: center;
@@ -251,6 +204,26 @@ Global
     margin: 1rem 0 0 0;
     padding: 0.33rem;
     letter-spacing: 0;
+  }
+  .breadcrumbs {
+    font-size: .75rem;
+  }
+  .breadcrumbs *::before {
+    font-size: 1rem;
+  }
+}
+
+@media all and (max-width: 400px) {
+  .global-footer {
+    flex-direction: column;
+    align-items: center;
+    font-size: 0.825rem;
+  }
+  .global-header {
+    padding: 1rem 0;
+  }
+  .global-header-nav a {
+    font-size: 0.8rem;
   }
 }
 
@@ -347,6 +320,33 @@ Section: Intro
   margin-top: 69px;
 }
 
+.section-intro * {
+  color: #fff;
+}
+
+.section-intro h1 {
+  font-size: 3.25rem;
+  margin-bottom: 1rem;
+  font-family: 'Kaushan Script';
+  text-transform: none;
+}
+
+.section-intro .section-subheading {
+  margin-bottom: 0;
+  line-height: 1.1;
+}
+
+@media all and (max-width: 640px) {
+  .section-intro {
+    margin-top: 0;
+    padding: 4rem 2rem;
+  }
+  .section-intro h1 {
+    font-size: 2.5rem;
+  }
+}
+
+
 /* -----------------------------------------------
 Section: Work
 ----------------------------------------------- */
@@ -365,6 +365,7 @@ Section: Work
   justify-content: space-between;
   flex-wrap: wrap;
   flex: 1;
+  width: 100%;
   max-width: 1200px;
   margin-top: 2rem;
   margin: auto;
@@ -430,10 +431,10 @@ Section: Work
 }
 
 .work-card-description {
-  font-size: 0.9rem;
+  font-size: 1rem;
   line-height: 1.4;
   margin-bottom: 0.75rem;
-  color: #999;
+  color: #777;
 }
 
 .work-card-stack {
@@ -558,7 +559,7 @@ Section: Experience
 
 .timeline-item {
   display: flex;
-  margin-bottom: 4rem;
+  margin-bottom: 3rem;
 }
 
 .timeline-image {
