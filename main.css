@@ -195,12 +195,13 @@ Global
     flex-direction: column;
   }
   .global-header-nav {
+    width: 100%;
     margin-top: 1rem;
     padding-top: 1rem;
     border-top: 1px solid rgba(255, 255, 255, 0.09);
+    text-align: center;
   }
   .global-header-nav a {
-    font-size: 0.9rem;
     margin: 1rem 0 0 0;
     padding: 0.33rem;
     letter-spacing: 0;
@@ -332,7 +333,7 @@ Section: Intro
   margin-bottom: 1rem;
   font-family: 'Kaushan Script';
   text-transform: none;
-  color: var(--primary-color);
+  color: #fff;
 }
 
 .section-intro .section-subheading {
