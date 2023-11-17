@@ -102,7 +102,7 @@ Global
 
 .breadcrumbs {
   width: 100%;
-  background: #222;
+  background: #2e2e2e;
   padding: 1rem 1rem 1.25rem 1rem;
   text-align: center;
   /* border-top: 1px solid rgba(255, 255, 255, 0.1); */
@@ -340,11 +340,18 @@ Components
 }
 
 /* -----------------------------------------------
+Section: Intro
+----------------------------------------------- */
+.section-intro {
+  background: #222;
+  margin-top: 69px;
+}
+
+/* -----------------------------------------------
 Section: Work
 ----------------------------------------------- */
 .section-work {
   background: #eee;
-  margin-top: 69px;
 }
 
 @media all and (max-width: 768px) {
