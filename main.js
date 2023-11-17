@@ -79,7 +79,6 @@ function highlightNavOnScroll() {
       visibleSection = sections.find((section) => section.offsetTop + section.clientHeight > fromTop);
     }
     Array.from(nav.querySelectorAll('a')).forEach((link) => link.classList.remove('active'));
-    console.log(visibleSection.id)
     document.querySelector(`a[href="#${visibleSection.id}"]`).classList.add('active');
   }
   window.addEventListener('scroll', debounce(handleScroll, 20));
