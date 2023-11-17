@@ -58,27 +58,28 @@ function handleScrollToTopButton() {
   }
 
   btnScrollToTop.addEventListener("click", function() {
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
-  })
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    })
+  });
 }
 
 function highlightNavOnScroll() {
   const nav = document.querySelector('#globalNav');
   const sections = Array.from(nav.children).map((item) => document.querySelector(item.hash));
   const sectionPadding = 200;
-  if (document.body.scrollTop === 0) {
-    nav.querySelector(`a[href="#work"]`).classList.add('active');
-  }
   function handleScroll() {
+
     let fromTop = window.scrollY + nav.clientHeight + sectionPadding;
     let visibleSection;
     if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 100) {
-      visibleSection = sections[sections.length - 1];
+      visibleSection = null;
     } else {
       visibleSection = sections.find((section) => section.offsetTop + section.clientHeight > fromTop);
     }
     Array.from(nav.querySelectorAll('a')).forEach((link) => link.classList.remove('active'));
+    console.log(visibleSection.id)
     document.querySelector(`a[href="#${visibleSection.id}"]`).classList.add('active');
   }
   window.addEventListener('scroll', debounce(handleScroll, 20));
