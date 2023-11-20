@@ -121,12 +121,10 @@ Global
 }
 
 .breadcrumbs *::before {
-  content: ">";
-  font-family: monospace;
+  content: "/\00a0";
   display: inline-flex;
-  font-size: 1.5rem;
   padding: 0 0.5rem;
-  color: rgba(100, 100, 100, 0.5);
+  color: rgba(150, 150, 150, 0.5);
 }
 
 .global-header {
@@ -166,6 +164,10 @@ Global
 
 .global-header-nav a:hover {
   color: var(--primary-color);
+}
+
+.global-header-nav a:focus {
+  color: #ddd;
 }
 
 .global-footer {
@@ -381,33 +383,27 @@ Section: Work
   box-shadow: 0 1px 1px hsl(0deg 0% 0% / 0.075), 0 2px 2px hsl(0deg 0% 0% / 0.075), 0 16px 16px hsl(0deg 0% 0% / 0.075);
   background: #f5f5f5;
   transition: all 0.3s ease-in-out;
+  text-align: center;
 }
 
 .work-card:hover {
   background: #fff;
 }
 
-@media all and (max-width: 1024px) {
-  .work-card {
-    flex: 0 0 48%;
-    max-width: 48%;
-    margin-bottom: 2rem;
-  }
-}
-
-@media all and (max-width: 640px) {
-  .work-card {
-    flex: 0 0 100%;
-    max-width: 100%;
-    /* padding: 1rem; */
-  }
-}
-
-.work-card-image {
+.work-card-image-container {
   display: flex;
-  max-width: 100%;
-  height: auto;
- filter: sepia(40%);
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 180px;
+  background-color: #fafafa;
+  box-shadow: inset 0 0 10rem rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease-in-out;
+}
+
+.work-card:hover .work-card-image-container {
+  background-color: #ffff;
+  box-shadow: inset 0 0 5rem rgba(0, 0, 0, 0.05);
 }
 
 .work-card-body {
@@ -437,14 +433,22 @@ Section: Work
   color: #777;
 }
 
-.work-card-stack {
-  display: flex;
+@media all and (max-width: 1024px) {
+  .work-card {
+    flex: 0 0 48%;
+    max-width: 48%;
+    margin-bottom: 2rem;
+  }
 }
 
-.work-card-stack img {
-  width: 40px;
-  height: 40px;
+@media all and (max-width: 640px) {
+  .work-card {
+    flex: 0 0 100%;
+    max-width: 100%;
+    /* padding: 1rem; */
+  }
 }
+
 
 /* -----------------------------------------------
 Section: Skills
@@ -545,6 +549,12 @@ Section: Contact
 .contact-links a {
   margin: 1rem;
   color: var(--primary-color);
+}
+
+@media all and (max-width: 640px) {
+  .contact-links a {
+    display: block;
+  }
 }
 
 /* -----------------------------------------------
