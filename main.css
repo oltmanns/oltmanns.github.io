@@ -571,7 +571,7 @@ Section: Experience
 
 .timeline-item {
   display: flex;
-  margin-bottom: 0;
+  margin-bottom: 1rem;
 }
 
 .timeline-image {
@@ -586,6 +586,17 @@ Section: Experience
   border-radius: 100%;
   width: 80px;
   height: 80px;
+}
+
+.timeline-bullet {
+  display: flex;
+  justify-content: center;
+  width: 20%;
+  margin-top: 0.75rem;
+  margin-left: -9%;
+  font-size: 4rem;
+  line-height: 1;
+  color: #0e589a;
 }
 
 .timeline-content {
@@ -657,7 +668,7 @@ Section: Experience
   }
   .timeline-content {
     padding-top: 1rem;
-    padding-left: 0.5rem;
+    padding-left: 1rem;
   }
   .timeline-image {
     width: 50px;
@@ -666,6 +677,9 @@ Section: Experience
   .timeline-image img {
     width: 50px;
     height: 50px;
+  }
+  .timeline-bullet {
+    display: none;
   }
 }
 
