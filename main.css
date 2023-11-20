@@ -165,10 +165,6 @@ Global
 }
 
 .global-header-nav a:hover {
-  color: #fff;
-}
-
-.global-header-nav a.active {
   color: var(--primary-color);
 }
 
@@ -224,9 +220,6 @@ Global
   }
   .global-header {
     padding: 1rem 0;
-  }
-  .global-header-nav a {
-    font-size: 0.8rem;
   }
 }
 
@@ -319,6 +312,7 @@ Components
 Section: Intro
 ----------------------------------------------- */
 .section-intro {
+  position: relative;
   background: #222;
   margin-top: 69px;
   padding: 6rem 1rem;
@@ -351,7 +345,6 @@ Section: Intro
     font-size: 2.5rem;
   }
 }
-
 
 /* -----------------------------------------------
 Section: Work
@@ -494,6 +487,7 @@ Section: Skills
   color: rgba(255, 255, 255, 0.7);
   margin-left: 0.5rem;
   margin-right: 0.5rem;
+  padding: 0.5rem 0;
   text-align: center;
 }
 
@@ -505,6 +499,7 @@ Section: Skills
 
 .skill-nav-link.is-active {
   color: var(--primary-color);
+  box-shadow: inset 0 -2px 0 0 var(--primary-color);
 }
 
 .skill-list {
@@ -566,7 +561,7 @@ Section: Experience
 
 .timeline-item {
   display: flex;
-  margin-bottom: 3rem;
+  margin-bottom: 0;
 }
 
 .timeline-image {
@@ -599,7 +594,7 @@ Section: Experience
   font-family: 'Monserrat', sans-serif;
   font-size: 1rem;
   line-height: 1.3;
-  color: #777;
+  color: #333;
 }
 
 .timeline-content-secondary ul {
@@ -612,6 +607,7 @@ Section: Experience
 
 .timeline-date {
   font-size: 1.25rem;
+  line-height: 1;
   font-weight: bold;
   color: #333 !important;
   text-decoration: none;
@@ -631,7 +627,7 @@ Section: Experience
   line-height: 1.2;
   margin-bottom: 1rem;
   font-weight: bold;
-  color: #777;
+  color: #666;
 }
 
 @media all and (max-width: 640px) {
