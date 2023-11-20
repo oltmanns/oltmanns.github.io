@@ -112,6 +112,13 @@ Global
   line-height: 1;
 }
 
+
+.breadcrumbs a, .breadcrumbs span {
+  color: #ccc;
+  line-height: 1;
+}
+
+
 .breadcrumbs a:hover {
   color: var(--primary-color);
 }
@@ -153,21 +160,13 @@ Global
 }
 
 .global-header-nav a {
-  color: #ddd;
+  color: var(--primary-color);
   font-size: 1rem;
   font-weight: 400;
   letter-spacing: 1px;
   text-decoration: none;
   margin-left: 1rem;
   transition: all ease 0.35s;
-}
-
-.global-header-nav a:hover {
-  color: var(--primary-color);
-}
-
-.global-header-nav a:focus {
-  color: #ddd;
 }
 
 .global-footer {
@@ -355,12 +354,6 @@ Section: Work
   background: #eee;
 }
 
-@media all and (max-width: 768px) {
-  .section-work {
-    margin-top: 0;
-  }
-}
-
 .work-container {
   display: flex;
   justify-content: space-between;
@@ -441,11 +434,19 @@ Section: Work
   }
 }
 
+@media all and (max-width: 768px) {
+  .section-work {
+    margin-top: 0;
+  }
+}
+
 @media all and (max-width: 640px) {
   .work-card {
     flex: 0 0 100%;
     max-width: 100%;
-    /* padding: 1rem; */
+  }
+  .work-card-image-container { 
+    height: 140px;
   }
 }
 
