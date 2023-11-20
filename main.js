@@ -37,10 +37,10 @@ function useSmoothScrolling() {
 
 function handleScrollToTopButton() {
 
-  var btnScrollToTop = document.createElement("button");
+  const btnScrollToTop = document.createElement("button");
   btnScrollToTop.style.display = "none";
-  var iconArrow = document.createElement("i");
-  var showHeight = 300;
+  const iconArrow = document.createElement("i");
+  const showHeight = 300;
 
   iconArrow.classList.add("icon-top-arrow");
   btnScrollToTop.appendChild(iconArrow);
@@ -65,39 +65,21 @@ function handleScrollToTopButton() {
   });
 }
 
-function highlightNavOnScroll() {
-  const nav = document.querySelector('#globalNav');
-  const sections = Array.from(nav.children).map((item) => document.querySelector(item.hash));
-  const sectionPadding = 200;
-  function handleScroll() {
-
-    let fromTop = window.scrollY + nav.clientHeight + sectionPadding;
-    let visibleSection;
-    if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 100) {
-      visibleSection = null;
-    } else {
-      visibleSection = sections.find((section) => section.offsetTop + section.clientHeight > fromTop);
-    }
-    Array.from(nav.querySelectorAll('a')).forEach((link) => link.classList.remove('active'));
-    document.querySelector(`a[href="#${visibleSection.id}"]`).classList.add('active');
-  }
-  window.addEventListener('scroll', debounce(handleScroll, 20));
-}
-
 function handleSetEmail() {
-  const links = document.querySelectorAll("[data-part1][data-part2][data-part3]");
-  for (const link of links) {
-    const attrs = link.dataset;
-    setTimeout(() => {
-      link.setAttribute("href", `mailto:${attrs.part1}@${attrs.part2}.${attrs.part3}`);
-    }, 2000);
-  }
+  const emailLink = document.querySelector("[data-part1][data-part2][data-part3]");
+  const emailText = document.querySelector("#emailLinkText");
+  const attrs = emailLink.dataset;
+  setTimeout(() => {
+    const emailAddress = `${attrs.part1}@${attrs.part2}.${attrs.part3}`;
+    emailLink.setAttribute("href", `mailto:${emailAddress}`);
+    emailText.textContent = emailAddress;
+  }, 1000);
 }
 
 function setCopyrightDate() {
   const copyright = document.querySelector("#copyright");
   if (copyright) {
-    var year = document.createTextNode(new Date().getFullYear());
+    const year = document.createTextNode(new Date().getFullYear());
     copyright.appendChild(year);
   }
 }
